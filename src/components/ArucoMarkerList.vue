@@ -5,7 +5,7 @@
     <label for="markers">Markers to show</label>
     <input id="markers" type="number" v-model.number="markers" min="1" max="500">
     <transition-group name="markers" tag="div" class="aruco-container">
-      <div class="marker-container" v-for="i in markers" :key="i">
+      <div class="marker-container" v-for="i in markers" :key="startIndex+i">
         <div>{{startIndex+i-1}}</div>
         <aruco-marker :id="startIndex+i-1" />
       </div>
